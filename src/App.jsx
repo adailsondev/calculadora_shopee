@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 export default function CalculadoraShopee() {
@@ -63,13 +62,19 @@ export default function CalculadoraShopee() {
         .btn-salvar { width: 100%; background: #2ecc71; color: #000; border: none; padding: 15px; border-radius: 10px; font-weight: 900; cursor: pointer; transition: 0.3s; }
         .btn-salvar:active { transform: scale(0.98); }
         .historico-titulo { font-size: 12px; color: #555; margin-top: 30px; border-bottom: 1px solid #222; padding-bottom: 5px; }
-        .lista { margin-top: 15px; max-height: 250px; overflow-y: auto; }
+        .lista { margin-top: 15px; max-height: 250px; overflow-y: auto; margin-bottom: 20px; }
         .item { background: #1a1a1a; padding: 12px; border-radius: 8px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #2ecc71; }
         .item h3 { margin: 0; font-size: 14px; }
         .item p { margin: 3px 0 0; font-size: 12px; color: #777; }
         .item .venda { color: #2ecc71; font-weight: bold; }
         .btn-del { background: none; border: none; color: #444; font-size: 18px; cursor: pointer; }
         .btn-del:hover { color: #e74c3c; }
+        
+        /* Estilo do Rodapé Adailson Soluções */
+        .footer-contato { border-top: 1px solid #222; padding-top: 15px; text-align: center; }
+        .footer-contato p { font-size: 11px; color: #555; margin: 0; }
+        .link-zap { color: #2ecc71; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 5px; font-size: 12px; }
+        .link-zap:hover { text-decoration: underline; }
       `}</style>
 
       <div className="card">
@@ -120,6 +125,21 @@ export default function CalculadoraShopee() {
             </div>
           ))}
         </div>
+
+        {/* --- INÍCIO DO RODAPÉ COM SEU ZAP --- */}
+        <div className="footer-contato">
+           <p>Desenvolvido por Adailson Soluções Digitais</p>
+           <a 
+             href="https://wa.me/5579999738314?text=Olá%20Adailson,%20vi%20sua%20calculadora%20e%20gostaria%20de%20conhecer%20seus%20serviços%20de%20software!" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             className="link-zap"
+           >
+             Precisa de um software? Clique aqui
+           </a>
+        </div>
+        {/* --- FIM DO RODAPÉ --- */}
+
       </div>
     </div>
   );
